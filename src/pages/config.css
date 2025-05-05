@@ -1,0 +1,60 @@
+/* Estilo padrão — agora tratado como tema claro */
+.config-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .config-modal {
+    background: #1f2937; /* Agora é o "claro" visualmente */
+    color: #f9fafb;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+  
+  .config-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: inherit;
+  }
+  
+  .config-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .config-button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f63b3b;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .config-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Novo tema alternativo (modo claro real, ativado com html.dark) */
+  html.dark .config-modal {
+    background: #ffffff;
+    color: #1f2937;
+  }
+  

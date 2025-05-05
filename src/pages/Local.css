@@ -1,0 +1,273 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, .local-container {
+  background-color: #000;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.title-cyan {
+  color: #67e8f9;
+}
+
+.title-red {
+  color: #ff3333;
+}
+
+.mode-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mode-btn {
+  background: none;
+  border: 2px solid white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-shadow: 0 0 8px #fff;
+}
+
+.mode-btn:hover {
+  background: linear-gradient(90deg, #67e8f9, #ff3333);
+  color: black;
+  text-shadow: none;
+}
+
+/* Jogo */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player img {
+  width: 90px;
+}
+
+.score {
+  font-size: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.blue {
+  color: #8ffeff;
+}
+
+.red {
+  color: #ff3333;
+}
+
+.vs-icon {
+  font-size: 36px;
+}
+
+/* Tabuleiro */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.player-turn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #8ffeff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 5px;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
+  border: 4px solid white;
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Botões de controle */
+.game-info {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #000;
+  padding: 40px;
+  border: 2px solid white;
+  text-align: center;
+}
+/* ===== TEMA CLARO (html.dark) ===== */
+html.dark body,
+html.dark .local-container {
+  background-color: white;
+  color: black;
+}
+
+html.dark .menu-title {
+  color: black;
+}
+
+html.dark .title-cyan {
+  color: #0ea5e9;
+}
+
+html.dark .title-red {
+  color: #dc2626;
+}
+
+html.dark .mode-btn {
+  border-color: black;
+  color: black;
+  text-shadow: none;
+}
+
+html.dark .mode-btn:hover {
+  background: linear-gradient(90deg, #0ea5e9, #dc2626);
+  color: white;
+}
+
+html.dark .score {
+  color: black;
+}
+
+html.dark .blue {
+  color: #0ea5e9;
+}
+
+html.dark .red {
+  color: #dc2626;
+}
+
+html.dark .vs-icon {
+  color: black;
+}
+
+html.dark .player-turn {
+  color: #0ea5e9;
+}
+
+html.dark .cell {
+  border-color: black;
+  color: black;
+}
+
+html.dark .cell:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+html.dark button {
+  border-color: black;
+  color: black;
+}
+
+html.dark button:hover {
+  background-color: black;
+  color: white;
+}
+
+html.dark .modal {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+.menuBtn {
+  color: white;
+  border-color: white;
+}
+html.dark .menuBtn {
+  color: black;
+  border-color: black;
+}
+
+html.dark .menuBtn:hover {
+  background-color: black;
+  color: white;
+}
