@@ -1,0 +1,230 @@
+/* ===== TEMA ESCURO (padrão, sem html.dark) ===== */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #robo_circulo {
+    width: 40dvh;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px cyan) drop-shadow(0 0 20px #00ffff);
+  }
+  
+  #robo_x {
+    width: 40dvh;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px red) drop-shadow(0 0 20px darkred);
+  }
+  
+  #robo_circulo:hover,
+  #robo_x:hover {
+    transform: scale(1.1);
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .home-title {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+  }
+  
+  .title-cyan {
+    color: #67e8f9;
+    text-shadow: -50px 0 100px #67e8f9;
+  }
+  
+  .title-red {
+    text-shadow: 50px 0 100px rgb(235, 75, 11);
+    color: #d41010;
+  }
+  
+  .home-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+  
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .menu-link {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border: 5px solid transparent;
+    border-radius: 50px;
+    color: white;
+    transition: transform 0.3s ease, border 0.3s ease;
+  }
+  
+  .menu-link:hover {
+    transform: scale(1.1);
+    border-color: white;
+  }
+  
+  .menu-config {
+    border: 2px solid white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+  }
+  
+  .menu-config:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .footer-text {
+    position: absolute;
+    bottom: 8px;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    letter-spacing: 0.2em;
+  }
+  
+  @keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* ===== TEMA CLARO (html.dark) ===== */
+  html.dark,
+  html.dark body {
+    background-color: white;
+    color: black;
+  }
+  
+  html.dark .home-container {
+    background-color: white;
+    color: black;
+  }
+  
+  html.dark .menu-link {
+    color: black;
+  }
+  
+  html.dark .menu-link:hover {
+    border-color: black;
+    color: black; /* garante visibilidade no hover */
+}
+
+
+html.dark .menu-config {
+    border-color: black;
+    color: black; /* garante visibilidade no hover */
+  }
+  
+  html.dark .menu-config:hover {
+    background-color: black;
+    color: black; 
+  }
+  
+  html.dark .footer-text {
+    color: #4b5563;
+  }
+  
+  html.dark #robo_circulo {
+    filter: drop-shadow(0 0 5px #0ff);
+  }
+  
+  html.dark #robo_x {
+    filter: drop-shadow(0 0 5px #f00);
+  }
+  
+  /* ===== Responsivo ===== */
+  @media (max-width: 1244px) {
+    .home-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  
+    .home-menu {
+      flex-direction: row;
+      justify-content: space-evenly;
+      gap: 2rem;
+    }
+  
+    .menu-link {
+      font-size: 1rem;
+    }
+  
+    .menu-config {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 790px) {
+    .home-title {
+      font-size: 2.5rem;
+      margin-bottom: -20px;
+    }
+  
+    #robo_circulo,
+    #robo_x {
+      width: 10rem;
+      height: 10rem;
+    }
+  
+    .home-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100dvh;
+      padding: 1rem;
+    }
+  
+    .robo-container {
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .home-menu {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .menu-link {
+      font-size: 1.5rem;
+    }
+  
+    .menu-config {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  
