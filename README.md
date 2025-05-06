@@ -1,3 +1,9 @@
+VELHA GAME MULTIPLAYER
+Aluno: Cauã lucas leão rodrigues 152312577
+UC : Sistemas distribuidos e tambem usabilidade
+Duvidas ou correções, contato: caualucasllr@gmail.com, 47 988702780
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
